@@ -1,0 +1,103 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+
+  <div class="navegation">
+    <ul>
+      <li class="list active">
+        <a href="/area-cliente">
+          <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+          <span class="title">Início</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="/perfil">
+          <span class="icon"><ion-icon name="accessibility-outline"></ion-icon></span>
+          <span class="title">Perfil</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="/grafico">
+          <span class="icon"><ion-icon name="analytics-outline"></ion-icon></span>
+          <span class="title">Gráfico</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="/configuracoes">
+          <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
+          <span class="title">Configurações</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="/ajuda">
+          <span class="icon"><ion-icon name="help-outline"></ion-icon></span>
+          <span class="title">Ajuda</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#">
+          <span class="icon"><ion-icon name="enter-outline"></ion-icon></span>
+          <span class="title">Sair</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+
+
+ <div class="container">
+  <a class="Logo">Agricode</a>
+  <h1 *ngFor = "let c of clientes">Olá, seja bem vindo(a) <b>{{c.nome}}</b></h1>
+
+
+  <div class="sensores">
+    <ul>
+      <li>
+          <span class="title" *ngFor = "let c of clientes">Temperatura :<b> {{c.ss_temp}}</b></span>
+      </li>
+    </ul>
+    <ul>
+      <li>
+          <span class="title" *ngFor = "let c of clientes">Umidade :<b> {{c.ss_umidade}}</b></span>
+      </li>
+    </ul>
+    <ul>
+      <li>
+          <span class="title" *ngFor = "let c of clientes">Nível dos tanques d´agua :<b> {{c.ss_nivelagua}}</b></span>
+      </li>
+    </ul>
+    <ul>
+      <li>
+          <span class="title" *ngFor = "let c of clientes">Regação :<b> Ligada/Desligada</b></span>
+      </li>
+    </ul>
+    <ul>
+      <li>
+          <span class="title" *ngFor = "let c of clientes">Chuva :<b> {{c.ss_chuva}}</b></span>
+      </li>
+    </ul>
+    <ul>
+      <li>
+          <span class="title" *ngFor = "let c of clientes">Fogo :<b> {{c.ss_chamas}}</b></span>
+      </li>
+    </ul>
+  </div>
+
+  <div class="regacao">
+    <h2>Iniciar regação na plantação agora</h2>
+    <button class="button"><span>Regar Agora </span></button>
+  </div>
+
+  <div class="info">
+    <h2>Atualizar informações agora</h2>
+    <button class="button"><span>Atualizar </span></button>
+  </div>
+
+ </div>  
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</ion-content>

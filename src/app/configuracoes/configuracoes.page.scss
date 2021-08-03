@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+ion-content{
+display: flex;
+justify-content: start;
+--background: rgb(150, 150, 150);
+}
+
+.navegation{
+   position: relative;
+   height: 100%;
+   width: 70px;
+   background: rgb(49, 49, 49);
+   box-shadow: 10px 0 0 #4caf50;
+   border-left: 5px solid rgb(49, 49, 49);
+   overflow-x: hidden;
+   transition: width 0.5s;
+}
+
+.navegation:hover{
+    width: 300px;
+}
+
+.navegation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;   
+}
+
+.navegation ul li{
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.navegation ul li.active{
+    background: #4caf50;
+}
+
+.navegation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navegation ul li.active a::before{
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: rgb(49, 49, 49);
+    border-radius: 50%;
+    box-shadow: 15px 15px 0 #4caf50;
+}
+
+.navegation ul li.active a::after{
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background: rgb(49, 49, 49);
+    border-radius: 50%;
+    box-shadow: 15px -15px 0 #4caf50;
+}
+
+
+.navegation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.navegation ul li a .icon ion-icon{
+    position: relative;
+    font-size: 1.5em;
+    z-index: 1;
+}
+
+.navegation ul li a .title{
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
