@@ -24,12 +24,6 @@
         </a>
       </li>
       <li class="list">
-        <a href="/configuracoes">
-          <span class="icon"><ion-icon name="settings-outline"></ion-icon></span>
-          <span class="title">Configurações</span>
-        </a>
-      </li>
-      <li class="list">
         <a href="/ajuda">
           <span class="icon"><ion-icon name="help-outline"></ion-icon></span>
           <span class="title">Ajuda</span>
@@ -52,6 +46,11 @@
 
 
   <div class="sensores">
+    <ul>
+      <li>
+          <p>Suas informações da plantação</p>
+      </li>
+    </ul>
     <ul>
       <li>
           <span class="title" *ngFor = "let c of clientes">Temperatura :<b> {{c.ss_temp}}</b></span>
